@@ -21,11 +21,11 @@ spec:
       terminationGracePeriodSeconds: 60
       # One pod per AZ (hard rule), and spread across nodes (soft rule)
       topologySpreadConstraints:
-        - maxSkew: 1
-          topologyKey: topology.kubernetes.io/zone
-          whenUnsatisfiable: DoNotSchedule
-          labelSelector:
-            matchLabels: {app: vprofile-app}
+       # - maxSkew: 1
+          #topologyKey: topology.kubernetes.io/zone
+         # whenUnsatisfiable: DoNotSchedule
+        #  labelSelector:
+         #   matchLabels: {app: vprofile-app}
         - maxSkew: 1
           topologyKey: kubernetes.io/hostname
           whenUnsatisfiable: ScheduleAnyway
